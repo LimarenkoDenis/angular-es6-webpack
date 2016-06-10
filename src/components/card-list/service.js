@@ -7,7 +7,7 @@ export default class CardService {
 
   list() {
     return this.$http.get('http://localhost:3000/cards').then((response) => {
-      console.log(response.data);
+    //   console.log(response.data);
       return response.data;
     }).catch((e) => {
       console.log(JSON.stringify(e));
@@ -34,17 +34,12 @@ export default class CardService {
     card.id = this.items.length;
     card.date = new Date();
     return this.$http.post(`http://localhost:3000/cards/  ${card}`)
-        .then((response) => {
-        return response.data;
-        })
-          .catch(function(e) {
-              console.log(JSON.stringify(e));
-          });
-  };
+        .then((response) => response.data);
+  }
 
   save(card) {
-      if (card.id) {
-          return this.update(card);
+    if (card.id) {
+    return this.update(card);
       }
       return this.add(card);
   };
