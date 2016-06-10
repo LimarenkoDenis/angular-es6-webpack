@@ -19,8 +19,8 @@ export default class CardService {
   }
 
   remove(card) {
-    let id = card.id;
-    return this.$http.delete(`http://localhost:3000/cards/  ${id}`)
+    var id = card.id;
+    return this.$http.delete('http://localhost:3000/cards/' + id)
           .then((response) => {
             //   console.log(response.data);
             return response.data;
@@ -33,7 +33,7 @@ export default class CardService {
   add(card) {
     card.id = this.items.length;
     card.date = new Date();
-    return this.$http.post(`http://localhost:3000/cards/  ${card}`)
+    return this.$http.post('http://localhost:3000/cards/', card)
         .then((response) => response.data);
   }
 

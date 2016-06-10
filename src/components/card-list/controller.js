@@ -2,29 +2,30 @@ export default class CardListController {
   constructor(CardService) {
     'ngInject';
     this.CardService = CardService;
-    this.items = [];
+    // this.items = [];
   }
 
   $onInit() {
-
     this.CardService.list().then((resolve) => {
-        this.items = resolve
+      this.items = resolve;
+        console.log(this.items);
     });
   }
 
-  add() {
+  add(card) {
     this.CardService.add(card)
       .then( (resolve) => {
-            this.items = resolve;
-            this.$onInit();
-            // self.CardService.update()
-        });
-    }
+        this.items = resolve;
+        this.$onInit();
+        // self.CardService.update()
+      });
+  }
 
-    remove() {
-        this.CardService.remove(card).then(function(resolve) {
-            this.items = resolve;
-            this.$onInit();
-        });
-    }
+  remove(card) {
+    console.log(card);
+    this.CardService.remove(card).then((resolve) => {
+      this.items = resolve;
+      this.$onInit();
+    });
+  }
 }
