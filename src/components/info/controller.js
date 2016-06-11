@@ -1,11 +1,14 @@
 export default class infoController {
-  constructor(CardService) {
+  constructor(InfoService) {
     'ngInject';
-    this.CardService = CardService;
+    this.InfoService = InfoService;
   }
 
   totalCount() {
-    return 20;
+    // this.InfoService.totalCount().then((resolve) => {
+    //   return resolve
+    // });
+    return this.InfoService.totalCount()
   }
 
   cardAmount() {

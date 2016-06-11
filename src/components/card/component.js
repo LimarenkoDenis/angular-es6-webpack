@@ -5,7 +5,10 @@ export default {
   template,
   controller,
   bindToController: true,
-  scope: {
+  // scope: {
+  //   item: '='
+  // },
+  bindings: {
     item: '='
   },
   require: {
