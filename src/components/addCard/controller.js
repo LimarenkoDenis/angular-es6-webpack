@@ -3,7 +3,7 @@ export default class AddCardController {
     'ngInject';
     this.CardService = CardService;
   }
-  
+
   addCard() {
     this.newCard = {
       title: 'default title',

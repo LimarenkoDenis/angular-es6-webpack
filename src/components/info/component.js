@@ -3,5 +3,9 @@ import controller from './controller';
 
 export default {
   template,
-  controller
+  controller,
+  bindToController: true,
+  require: {
+    CardListController: '^^cardList'
+  }
 };

@@ -17,18 +17,28 @@
       "price": 2
     },
     {
+      "title": "default title",
+      "description": "default description",
       "id": 2,
-      "title": "title2",
-      "description": "loremloremipson22222",
-      "date": "21 May, 2015",
-      "count": 5,
-      "price": 4
+      "date": "2016-06-14T09:13:29.080Z"
     },
     {
       "title": "default title",
       "description": "default description",
       "id": 3,
-      "date": "2016-06-10T15:56:23.930Z"
+      "date": "2016-06-14T09:20:03.756Z"
+    },
+    {
+      "title": "default title",
+      "description": "default description",
+      "id": 4,
+      "date": "2016-06-14T09:20:22.675Z"
+    },
+    {
+      "title": "default title",
+      "description": "default description",
+      "id": 5,
+      "date": "2016-06-14T09:20:23.306Z"
     }
   ]
 }

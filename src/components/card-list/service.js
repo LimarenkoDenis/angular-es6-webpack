@@ -7,7 +7,6 @@ export default class CardService {
 
     list() {
         return this.$http.get('http://localhost:3000/cards').then((response) => {
-            // console.log(response.data);
             return response.data;
         }).catch((e) => {
             console.log(JSON.stringify(e));
@@ -22,7 +21,6 @@ export default class CardService {
         var id = card.id;
         return this.$http.delete('http://localhost:3000/cards/' + id)
             .then((response) => {
-                //   console.log(response.data);
                 return response.data;
             })
             .catch((e) => {
@@ -46,10 +44,6 @@ export default class CardService {
     };
 
 
-    totalCount() {
-        return 10;
-    };
-
 
     update() {
         // var index = this.items.findIndex(function(item) {
@@ -64,6 +58,7 @@ export default class CardService {
                 console.log(JSON.stringify(e));
             });
     }
+
 }
 
 // {
