@@ -6,6 +6,18 @@ export default class infoController {
   }
 
   totalAmount() {
-    return this.CardListController.totalAmount()
+    return this.CardListController.totalAmount();
+  }
+
+  totalCount() {
+    return this.CardListController.totalCount();
+  }
+
+  totalPrice() {
+    return this.CardListController.totalPrice();
+  }
+
+  avg() {
+    return this.CardListController.avg();
   }
 }

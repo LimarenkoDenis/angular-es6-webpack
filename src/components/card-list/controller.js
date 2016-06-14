@@ -7,9 +7,7 @@ export default class CardListController {
   $onInit() {
     this.CardService.list().then((resolve) => {
       this.items = resolve;
-      this.count = this.items.length;
-    //   console.log(`this.items.length ${this.items.length}`);
-    //   console.log(this.count);
+      this.cardAmount = this.items.length;
     });
   }
 
@@ -23,7 +21,35 @@ export default class CardListController {
   }
 
   totalAmount() {
-    return this.count;
+    return this.cardAmount;
+  }
+
+  totalCount() {
+    let totalCount = 0;
+    for (let i = 0; i < this.cardAmount; i++) {
+      totalCount += this.items[i].count;
+    }
+    return totalCount;
+  }
+
+  totalPrice() {
+    let totalPrice = 0;
+    for (let i = 0; i < this.cardAmount; i++) {
+      totalPrice += (this.items[i].count * this.items[i].price);
+    }
+    return totalPrice;
+  }
+
+  avg() {
+    let totalPrice = 0;
+    let totalCount = 0;
+    for (let i = 0; i < this.cardAmount; i++) {
+      totalPrice += (this.items[i].count * this.items[i].price);
+    }
+    for (let i = 0; i < this.cardAmount; i++) {
+      totalCount += this.items[i].count;
+    }
+    return (totalPrice / totalCount).toFixed(2);
   }
 
   remove(card) {

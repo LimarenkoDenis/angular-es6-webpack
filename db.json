@@ -5,7 +5,7 @@
       "title": "title0",
       "description": "loremloremipson00000",
       "date": "21 May, 2015",
-      "count": 5,
+      "count": 6,
       "price": 12
     },
     {
@@ -19,26 +19,26 @@
     {
       "title": "default title",
       "description": "default description",
+      "count": 0,
+      "price": 0,
       "id": 2,
-      "date": "2016-06-14T09:13:29.080Z"
+      "date": "2016-06-14T09:35:13.001Z"
     },
     {
       "title": "default title",
       "description": "default description",
+      "count": 0,
+      "price": 0,
       "id": 3,
-      "date": "2016-06-14T09:20:03.756Z"
+      "date": "2016-06-14T09:58:22.733Z"
     },
     {
       "title": "default title",
       "description": "default description",
+      "count": 0,
+      "price": 0,
       "id": 4,
-      "date": "2016-06-14T09:20:22.675Z"
-    },
-    {
-      "title": "default title",
-      "description": "default description",
-      "id": 5,
-      "date": "2016-06-14T09:20:23.306Z"
+      "date": "2016-06-14T09:58:26.260Z"
     }
   ]
 }
